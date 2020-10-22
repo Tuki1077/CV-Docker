@@ -1,0 +1,114 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Curriculum Juan Luis Fernandez</title>
+      <style>
+         * {
+         box-sizing: border-box;
+         }
+         body{
+         background-color: blanchedalmond;
+         }
+         .row{
+         display: flex;
+         align-items: center;
+         align-content: center;
+         height: 90%;
+         width: 80%;
+         }
+         .column-2 {
+         float: left;
+         width: 50%;
+         height: 100%;
+         overflow: auto;
+         background-color: white;
+         }
+         #containter-principal{
+         border: 0px;
+         text-align: center;
+         vertical-align: middle;
+         margin:2% auto;
+         box-shadow: 5px 10px 18px #888888;
+         }
+         img{
+         border-radius: 50%;
+         margin-top:30%;
+         width: 200px;
+         height: 200px;
+         }
+         .column-left{
+         background-color:cadetblue;
+         }
+         li {
+         list-style: none;
+         }
+         .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+         }
+            .button2 {background-color: cadetblue;}
+      </style>
+   </head>
+   <body>
+      <button class = "button button2" onclick = "window.location.href = '/'">Home
+         </button>
+      <div id="containter-principal" class="row">
+         <div class="column-2 column-left">
+            <img src="../static/Tuki.jpg">
+            <h1>{{nombre}}</h1>
+            <p><b> Acerca de Mi:</b> {{acercademi}}</p>
+         </div>
+         <div class="column-2 ">
+            <h1 class = "titulo">Curriculum</h1>
+            <h2>Informacion Personal</h2>
+            <b><p>Computer Science Student</p></b>
+            <ul>
+               <p><b> Pais:</b> {{lugardena}}</p>
+               <p style = "color: rgb(0, 0, 0)"><b> Idioma:</b></p>
+               <ol>
+                  {% for x in idioma %}
+                  <li> {{x}}</li>
+                  {% endfor %}
+               </ol>
+               <li>
+                  <p><b> Edad:</b> {{ed}}</p>
+               </li>
+               <li>
+                  <p><b> Experiencia:</b> {{exp}}</p>
+               </li>
+               <li>
+                  <p><b> Intereses:</b></p>
+               </li>
+               <ol>
+                  {% for x in interes %}
+                  <li> {{x}}</li>
+                  {% endfor %}
+               </ol>
+               <li>
+                  <p><b> Tecnologias:</b></p>
+                  <ol>
+                     {% for x in tecnologia %}
+                     <li>{{x}}</li>
+                     {% endfor %}
+                  </ol>
+               </li>
+               <li>
+                  <p><b> Referencias Personales:</b></p>
+                  <ol>
+                     {% for x in InfPersonal %}
+                     <li>{{x}}</li>
+                     {% endfor %}
+                  </ol>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </body>

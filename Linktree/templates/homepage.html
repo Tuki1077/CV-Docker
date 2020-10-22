@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+        <style>
+            .pill-nav a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px;
+                text-decoration: none;
+                font-size: 17px;
+                border-radius: 5px;
+                }
+
+                .pill-nav a:hover {
+                background-color: rgb(0, 64, 128);
+                color: rgb(255, 255, 255);
+                }
+
+                .pill-nav a.active {
+                background-color: rgb(0,64, 128);
+                color: white;
+                }
+
+                div {
+                background-color: cadetblue;
+                width: 500px;
+                box-shadow: 5px 10px 18px #888888;
+                padding: 50px;
+                margin: auto;
+                }
+                img{
+                border-radius: 50%;
+                margin-top:5%;
+                margin-bottom: 5%;
+                width: 200px;
+                height: 200px;
+                margin-left: 30%;
+                margin-right: 60%;
+                }
+                h2{
+                text-align: center;
+                color:aliceblue;
+                }
+        </style>
+    </head>
+    <body style= "background-color: blanchedalmond">
+    <div class="pill-nav">
+        <img src="../static/Tuki.jpg">
+        <h2 text>{{nombre}}</h2>
+        <a class= "active" href="/">Home</a> <br>
+        {% for links in link %}
+            {% for k, v in links.items() %}
+                <body class="list-group-item text-center">
+                 <a href="{{v}}" >{{k}} </a>
+                </body>
+            {% endfor %}
+        {% endfor %}
+        <a href="/cv">CV</a>
+    </div>
+    </body>
+</html>
